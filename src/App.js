@@ -31,10 +31,33 @@ function App() {
   const getUsers = async () => {
     try {
       const res = await axios.get("https://wild-pink-coati-tux.cyclic.app/api/items");
-      setUsers(res.data.sort((a, b) => (a.nome > b.nome ? 1 : -1)));
+      const sortedUsers = res.data.sort((a, b) => {
+        const monthA = getMonthIndex(a.mes);
+        const monthB = getMonthIndex(b.mes);
+        return monthA - monthB;
+      });
+      setUsers(sortedUsers);
     } catch (error) {
       toast.error(error);
     }
+  };
+
+  const getMonthIndex = (monthString) => {
+    const months = [
+      "Janeiro",
+      "Fevereiro",
+      "Março",
+      "Abril",
+      "Maio",
+      "Junho",
+      "Julho",
+      "Agosto",
+      "Setembro",
+      "Outubro",
+      "Novembro",
+      "Dezembro"
+    ];
+    return months.indexOf(monthString);
   };
 
   useEffect(() => {
