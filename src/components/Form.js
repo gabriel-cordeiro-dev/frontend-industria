@@ -97,7 +97,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
           mes: user.mes.value,
           type: user.type.value,
         })
-        .then(({ data }) => toast.success(data))
+        .then(({ data }) => toast.success("Alterado com Sucesso!"))
         .catch(({ data }) => toast.error(data));
     } else {
       await axios
@@ -107,7 +107,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
           mes: user.mes.value,
           type: user.type.value,
         })
-        .then(({ data }) => toast.success(data))
+        .then(({ data }) => toast.success("Inserido com Sucesso!"))
         .catch(({ data }) => toast.error(data));
     }
 

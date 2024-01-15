@@ -58,7 +58,7 @@ const Grid = ({ users, setUsers, setOnEdit }) => {
         const newArray = users.filter((user) => user.id !== id);
 
         setUsers(newArray);
-        toast.success(data);
+        toast.success("Deletado com Sucesso");
       })
       .catch(({ data }) => toast.error(data));
 
