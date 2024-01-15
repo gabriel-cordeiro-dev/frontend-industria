@@ -32,9 +32,16 @@ function App() {
     try {
       const res = await axios.get("https://wild-pink-coati-tux.cyclic.app/api/items");
       const sortedUsers = res.data.sort((a, b) => {
+        const yearComparison = b.ano- a.ano;
+
+        if (yearComparison !== 0) {
+          return yearComparison; // Ordena por ano primeiro
+        }
+
         const monthA = getMonthIndex(a.mes);
         const monthB = getMonthIndex(b.mes);
-        return monthA - monthB;
+
+        return monthA - monthB; // Em seguida, ordena por mês
       });
       setUsers(sortedUsers);
     } catch (error) {
