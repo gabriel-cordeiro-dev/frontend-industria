@@ -1,0 +1,69 @@
+/* Estilos do formulário de login */
+.formLogin {
+    width: 400px; /* Largura do formulário */
+    margin: 20px auto; /* Centralização horizontal */
+    padding: 20px;
+    background: #f4f4f4; /* Cor de fundo mais clara */
+    border: 2px solid #ddd; /* Borda com cor mais suave */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Estilos do campo de entrada */
+  .formLogin .inputField {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Reduzi a margem superior */
+  }
+  
+  /* Ajustes comuns para todos os elementos de entrada */
+  .formLogin input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Agora com bordas arredondadas de 8px */
+    box-sizing: border-box;
+  }
+  
+  /* Estilize o botão de envio */
+  .formLogin button {
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Adicione efeitos de hover no botão */
+  .formLogin button:hover {
+    background: #45a049;
+  }
+  
+  /* Estilos do título do formulário */
+  .formLogin .tituloForm {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: 600;
+    color: #333; /* Cor do texto */
+  }
+  
+  /* Estilos do botão do formulário */
+  .formLogin .botaoFormulario {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Reduzi a margem superior */
+  }
+  
